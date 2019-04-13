@@ -1,4 +1,4 @@
-#include <src/WebSocket.h>
+#include "../lib/uWebSockets-0.15.5/src/WebSocket.h"
 #include <deque>
 #include <unordered_map>
 #include <map>
