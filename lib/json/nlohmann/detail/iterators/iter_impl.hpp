@@ -4,13 +4,13 @@
 #include <iterator> // iterator, random_access_iterator_tag, bidirectional_iterator_tag, advance, next
 #include <type_traits> // conditional, is_const, remove_const
 
-#include <nlohmann/detail/exceptions.hpp>
-#include <nlohmann/detail/iterators/internal_iterator.hpp>
-#include <nlohmann/detail/iterators/primitive_iterator.hpp>
-#include <nlohmann/detail/macro_scope.hpp>
-#include <nlohmann/detail/meta/cpp_future.hpp>
-#include <nlohmann/detail/meta/type_traits.hpp>
-#include <nlohmann/detail/value_t.hpp>
+#include "detail/exceptions.hpp"
+#include "detail/iterators/internal_iterator.hpp"
+#include "detail/iterators/primitive_iterator.hpp"
+#include "detail/macro_scope.hpp"
+#include "detail/meta/cpp_future.hpp"
+#include "detail/meta/type_traits.hpp"
+#include "detail/value_t.hpp"
 
 namespace nlohmann
 {
@@ -34,7 +34,7 @@ This class implements a both iterators (iterator and const_iterator) for the
   The iterator that can be moved can be moved in both directions (i.e.
   incremented and decremented).
 @since version 1.0.0, simplified in version 2.0.9, change to bidirectional
-       iterators in version 3.0.0 (see https://github.com/nlohmann/json/issues/593)
+       iterators in version 3.0.0 (see https://github.com"json/issues/593)
 */
 template<typename BasicJsonType>
 class iter_impl

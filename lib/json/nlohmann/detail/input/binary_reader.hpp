@@ -13,12 +13,12 @@
 #include <string> // char_traits, string
 #include <utility> // make_pair, move
 
-#include <nlohmann/detail/exceptions.hpp>
-#include <nlohmann/detail/input/input_adapters.hpp>
-#include <nlohmann/detail/input/json_sax.hpp>
-#include <nlohmann/detail/macro_scope.hpp>
-#include <nlohmann/detail/meta/is_sax.hpp>
-#include <nlohmann/detail/value_t.hpp>
+#include "detail/exceptions.hpp"
+#include "detail/input/input_adapters.hpp"
+#include "detail/input/json_sax.hpp"
+#include "detail/macro_scope.hpp"
+#include "detail/meta/is_sax.hpp"
+#include "detail/value_t.hpp"
 
 namespace nlohmann
 {

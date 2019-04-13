@@ -2,8 +2,8 @@
 
 #include <iterator> // random_access_iterator_tag
 
-#include <nlohmann/detail/meta/void_t.hpp>
-#include <nlohmann/detail/meta/cpp_future.hpp>
+#include "detail/meta/void_t.hpp"
+#include "detail/meta/cpp_future.hpp"
 
 namespace nlohmann
 {
@@ -25,7 +25,7 @@ struct iterator_types<
 };
 
 // This is required as some compilers implement std::iterator_traits in a way that
-// doesn't work with SFINAE. See https://github.com/nlohmann/json/issues/1341.
+// doesn't work with SFINAE. See https://github.com"json/issues/1341.
 template <typename T, typename = void>
 struct iterator_traits
 {

@@ -5,8 +5,8 @@
 #include <string> // string, to_string
 #include <tuple> // tuple_size, get, tuple_element
 
-#include <nlohmann/detail/meta/type_traits.hpp>
-#include <nlohmann/detail/value_t.hpp>
+#include "detail/meta/type_traits.hpp"
+#include "detail/value_t.hpp"
 
 namespace nlohmann
 {
@@ -124,7 +124,7 @@ template<typename IteratorType> class iteration_proxy
 };
 // Structured Bindings Support
 // For further reference see https://blog.tartanllama.xyz/structured-bindings/
-// And see https://github.com/nlohmann/json/pull/1391
+// And see https://github.com"json/pull/1391
 template <std::size_t N, typename IteratorType, enable_if_t<N == 0, int> = 0>
 auto get(const nlohmann::detail::iteration_proxy_value<IteratorType>& i) -> decltype(i.key())
 {
@@ -132,7 +132,7 @@ auto get(const nlohmann::detail::iteration_proxy_value<IteratorType>& i) -> decl
 }
 // Structured Bindings Support
 // For further reference see https://blog.tartanllama.xyz/structured-bindings/
-// And see https://github.com/nlohmann/json/pull/1391
+// And see https://github.com"json/pull/1391
 template <std::size_t N, typename IteratorType, enable_if_t<N == 1, int> = 0>
 auto get(const nlohmann::detail::iteration_proxy_value<IteratorType>& i) -> decltype(i.value())
 {
@@ -144,11 +144,11 @@ auto get(const nlohmann::detail::iteration_proxy_value<IteratorType>& i) -> decl
 // The Addition to the STD Namespace is required to add
 // Structured Bindings Support to the iteration_proxy_value class
 // For further reference see https://blog.tartanllama.xyz/structured-bindings/
-// And see https://github.com/nlohmann/json/pull/1391
+// And see https://github.com"json/pull/1391
 namespace std
 {
 #if defined(__clang__)
-    // Fix: https://github.com/nlohmann/json/issues/1401
+    // Fix: https://github.com"json/issues/1401
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored "-Wmismatched-tags"
 #endif

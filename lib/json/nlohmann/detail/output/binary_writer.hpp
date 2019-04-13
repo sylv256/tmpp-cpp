@@ -7,8 +7,8 @@
 #include <limits> // numeric_limits
 #include <string> // string
 
-#include <nlohmann/detail/input/binary_reader.hpp>
-#include <nlohmann/detail/output/output_adapters.hpp>
+#include "detail/input/binary_reader.hpp"
+#include "detail/output/output_adapters.hpp"
 
 namespace nlohmann
 {
@@ -1287,7 +1287,7 @@ class binary_writer
     // The following to_char_type functions are implement the conversion
     // between uint8_t and CharType. In case CharType is not unsigned,
     // such a conversion is required to allow values greater than 128.
-    // See <https://github.com/nlohmann/json/issues/1286> for a discussion.
+    // See <https://github.com"json/issues/1286> for a discussion.
     template < typename C = CharType,
                enable_if_t < std::is_signed<C>::value and std::is_signed<char>::value > * = nullptr >
     static constexpr CharType to_char_type(std::uint8_t x) noexcept

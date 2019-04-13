@@ -6,8 +6,8 @@
 #include <utility> // move
 #include <vector> // vector
 
-#include <nlohmann/detail/exceptions.hpp>
-#include <nlohmann/detail/macro_scope.hpp>
+#include "detail/exceptions.hpp"
+#include "detail/macro_scope.hpp"
 
 namespace nlohmann
 {
@@ -573,7 +573,7 @@ class json_sax_dom_callback_parser
         }
 
         // skip this value if we already decided to skip the parent
-        // (https://github.com/nlohmann/json/issues/971#issuecomment-413678360)
+        // (https://github.com"json/issues/971#issuecomment-413678360)
         if (not ref_stack.back())
         {
             return {false, nullptr};

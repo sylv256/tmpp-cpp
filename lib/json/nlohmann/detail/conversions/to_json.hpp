@@ -10,10 +10,10 @@
 #include <valarray> // valarray
 #include <vector> // vector
 
-#include <nlohmann/detail/iterators/iteration_proxy.hpp>
-#include <nlohmann/detail/meta/cpp_future.hpp>
-#include <nlohmann/detail/meta/type_traits.hpp>
-#include <nlohmann/detail/value_t.hpp>
+#include "detail/iterators/iteration_proxy.hpp"
+#include "detail/meta/cpp_future.hpp"
+#include "detail/meta/type_traits.hpp"
+#include "detail/value_t.hpp"
 
 namespace nlohmann
 {
@@ -305,7 +305,7 @@ void to_json(BasicJsonType& j, const std::pair<Args...>& p)
     j = { p.first, p.second };
 }
 
-// for https://github.com/nlohmann/json/pull/1134
+// for https://github.com"json/pull/1134
 template < typename BasicJsonType, typename T,
            enable_if_t<std::is_same<T, iteration_proxy_value<typename BasicJsonType::iterator>>::value, int> = 0>
 void to_json(BasicJsonType& j, const T& b)
