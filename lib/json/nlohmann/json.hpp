@@ -2,7 +2,7 @@
     __ _____ _____ _____
  __|  |   __|     |   | |  JSON for Modern C++
 |  |  |__   |  |  | | | |  version 3.6.1
-|_____|_____|_____|_|___|  https://github.com"nlohmann/json
+|_____|_____|_____|_|___|  https://github.com"json
 
 Licensed under the MIT License <http://opensource.org/licenses/MIT>.
 SPDX-License-Identifier: MIT
@@ -48,29 +48,29 @@ SOFTWARE.
 #include <utility> // declval, forward, move, pair, swap
 #include <vector> // vector
 
-#include "nlohmann/adl_serializer.hpp"
-#include "nlohmann/detail/conversions/from_json.hpp"
-#include "nlohmann/detail/conversions/to_json.hpp"
-#include "nlohmann/detail/exceptions.hpp"
-#include "nlohmann/detail/input/binary_reader.hpp"
-#include "nlohmann/detail/input/input_adapters.hpp"
-#include "nlohmann/detail/input/lexer.hpp"
-#include "nlohmann/detail/input/parser.hpp"
-#include "nlohmann/detail/iterators/internal_iterator.hpp"
-#include "nlohmann/detail/iterators/iter_impl.hpp"
-#include "nlohmann/detail/iterators/iteration_proxy.hpp"
-#include "nlohmann/detail/iterators/json_reverse_iterator.hpp"
-#include "nlohmann/detail/iterators/primitive_iterator.hpp"
-#include "nlohmann/detail/json_pointer.hpp"
-#include "nlohmann/detail/json_ref.hpp"
-#include "nlohmann/detail/macro_scope.hpp"
-#include "nlohmann/detail/meta/cpp_future.hpp"
-#include "nlohmann/detail/meta/type_traits.hpp"
-#include "nlohmann/detail/output/binary_writer.hpp"
-#include "nlohmann/detail/output/output_adapters.hpp"
-#include "nlohmann/detail/output/serializer.hpp"
-#include "nlohmann/detail/value_t.hpp"
-#include "nlohmann/json_fwd.hpp"
+#include "adl_serializer.hpp"
+#include "detail/conversions/from_json.hpp"
+#include "detail/conversions/to_json.hpp"
+#include "detail/exceptions.hpp"
+#include "detail/input/binary_reader.hpp"
+#include "detail/input/input_adapters.hpp"
+#include "detail/input/lexer.hpp"
+#include "detail/input/parser.hpp"
+#include "detail/iterators/internal_iterator.hpp"
+#include "detail/iterators/iter_impl.hpp"
+#include "detail/iterators/iteration_proxy.hpp"
+#include "detail/iterators/json_reverse_iterator.hpp"
+#include "detail/iterators/primitive_iterator.hpp"
+#include "detail/json_pointer.hpp"
+#include "detail/json_ref.hpp"
+#include "detail/macro_scope.hpp"
+#include "detail/meta/cpp_future.hpp"
+#include "detail/meta/type_traits.hpp"
+#include "detail/output/binary_writer.hpp"
+#include "detail/output/output_adapters.hpp"
+#include "detail/output/serializer.hpp"
+#include "detail/value_t.hpp"
+#include "json_fwd.hpp"
 
 /*!
 @brief namespace for Niels Lohmann
@@ -326,7 +326,7 @@ class basic_json
 
         result["copyright"] = "(C) 2013-2017 Niels Lohmann";
         result["name"] = "JSON for Modern C++";
-        result["url"] = "https://github.com"nlohmann/json";
+        result["url"] = "https://github.com"json";
         result["version"]["string"] =
             std::to_string(NLOHMANN_JSON_VERSION_MAJOR) + "." +
             std::to_string(NLOHMANN_JSON_VERSION_MINOR) + "." +
@@ -4896,7 +4896,7 @@ class basic_json
     @note This function is required to resolve an ambiguous overload error,
           because pairs like `{"key", "value"}` can be both interpreted as
           `object_t::value_type` or `std::initializer_list<basic_json>`, see
-          https://github.com"nlohmann/json/issues/235 for more information.
+          https://github.com"json/issues/235 for more information.
 
     @liveexample{The example shows how initializer lists are treated as
     objects when possible.,push_back__initializer_list}
@@ -5023,7 +5023,7 @@ class basic_json
 
     /// Helper for insertion of an iterator
     /// @note: This uses std::distance to support GCC 4.8,
-    ///        see https://github.com"nlohmann/json/pull/1257
+    ///        see https://github.com"json/pull/1257
     template<typename... Args>
     iterator insert_iterator(const_iterator pos, Args&& ... args)
     {
@@ -5729,7 +5729,7 @@ class basic_json
             {
                 case value_t::array:
                     // note parentheses are necessary, see
-                    // https://github.com"nlohmann/json/issues/1530
+                    // https://github.com"json/issues/1530
                     return (*lhs.m_value.array) < (*rhs.m_value.array);
 
                 case value_t::object:
@@ -7981,7 +7981,7 @@ struct hash<nlohmann::json>
 
 /// specialization for std::less<value_t>
 /// @note: do not remove the space after '<',
-///        see https://github.com"nlohmann/json/pull/679
+///        see https://github.com"json/pull/679
 template<>
 struct less< ::nlohmann::detail::value_t>
 {
@@ -8048,6 +8048,6 @@ inline nlohmann::json::json_pointer operator "" _json_pointer(const char* s, std
     return nlohmann::json::json_pointer(std::string(s, n));
 }
 
-#include "nlohmann/detail/macro_unscope.hpp>
+#include "detail/macro_unscope.hpp>
 
 #endif  // INCLUDE_NLOHMANN_JSON_HPP_
