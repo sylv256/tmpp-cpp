@@ -21,7 +21,7 @@
 /* The loop is lazily created per-thread and run with uWS::run() */
 
 #include "LoopData.h"
-#include <libusockets_new.h>
+#include "../uSockets/src/libusockets_new.h"
 
 namespace uWS {
 struct Loop {
