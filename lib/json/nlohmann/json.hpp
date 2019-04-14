@@ -326,7 +326,7 @@ class basic_json
 
         result["copyright"] = "(C) 2013-2017 Niels Lohmann";
         result["name"] = "JSON for Modern C++";
-        result["url"] = "https://github.com"json";
+        result["url"] = "https://github.com";
         result["version"]["string"] =
             std::to_string(NLOHMANN_JSON_VERSION_MAJOR) + "." +
             std::to_string(NLOHMANN_JSON_VERSION_MINOR) + "." +
@@ -8048,6 +8048,6 @@ inline nlohmann::json::json_pointer operator "" _json_pointer(const char* s, std
     return nlohmann::json::json_pointer(std::string(s, n));
 }
 
-#include "detail/macro_unscope.hpp>
+#include "detail/macro_unscope.hpp"
 
 #endif  // INCLUDE_NLOHMANN_JSON_HPP_
