@@ -2,8 +2,8 @@
 
 #include <iterator> // random_access_iterator_tag
 
-#include "detail/meta/void_t.hpp"
-#include "detail/meta/cpp_future.hpp"
+#include "../meta/void_t.hpp"
+#include "../meta/cpp_future.hpp"
 
 namespace nlohmann
 {

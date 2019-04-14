@@ -5,10 +5,10 @@
 #include <type_traits> // false_type, is_constructible, is_integral, is_same, true_type
 #include <utility> // declval
 
-#include "detail/iterators/iterator_traits.hpp"
-#include "detail/macro_scope.hpp"
-#include "detail/meta/cpp_future.hpp"
-#include "detail/meta/detected.hpp"
+#include "../iterators/iterator_traits.hpp"
+#include "../macro_scope.hpp"
+#include "../meta/cpp_future.hpp"
+#include "../meta/detected.hpp"
 #include "../../json_fwd.hpp"
 
 namespace nlohmann

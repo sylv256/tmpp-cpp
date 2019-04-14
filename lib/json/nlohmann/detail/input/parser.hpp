@@ -8,13 +8,13 @@
 #include <utility> // move
 #include <vector> // vector
 
-#include "detail/exceptions.hpp"
-#include "detail/input/input_adapters.hpp"
-#include "detail/input/json_sax.hpp"
-#include "detail/input/lexer.hpp"
-#include "detail/macro_scope.hpp"
-#include "detail/meta/is_sax.hpp"
-#include "detail/value_t.hpp"
+#include "../exceptions.hpp"
+#include "../input/input_adapters.hpp"
+#include "../input/json_sax.hpp"
+#include "../input/lexer.hpp"
+#include "../macro_scope.hpp"
+#include "../meta/is_sax.hpp"
+#include "../value_t.hpp"
 
 namespace nlohmann
 {

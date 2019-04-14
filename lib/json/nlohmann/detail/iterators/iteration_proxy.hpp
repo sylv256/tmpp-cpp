@@ -5,8 +5,8 @@
 #include <string> // string, to_string
 #include <tuple> // tuple_size, get, tuple_element
 
-#include "detail/meta/type_traits.hpp"
-#include "detail/value_t.hpp"
+#include "../meta/type_traits.hpp"
+#include "../value_t.hpp"
 
 namespace nlohmann
 {

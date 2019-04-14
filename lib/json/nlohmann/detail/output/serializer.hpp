@@ -14,13 +14,13 @@
 #include <type_traits> // is_same
 #include <utility> // move
 
-#include "detail/conversions/to_chars.hpp"
-#include "detail/exceptions.hpp"
-#include "detail/macro_scope.hpp"
-#include "detail/meta/cpp_future.hpp"
-#include "detail/output/binary_writer.hpp"
-#include "detail/output/output_adapters.hpp"
-#include "detail/value_t.hpp"
+#include "../conversions/to_chars.hpp"
+#include "../exceptions.hpp"
+#include "../macro_scope.hpp"
+#include "../meta/cpp_future.hpp"
+#include "../output/binary_writer.hpp"
+#include "../output/output_adapters.hpp"
+#include "../value_t.hpp"
 
 namespace nlohmann
 {

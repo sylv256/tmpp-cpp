@@ -1,6 +1,6 @@
 #pragma once
 
-#include "detail/iterators/primitive_iterator.hpp"
+#include "../iterators/primitive_iterator.hpp"
 
 namespace nlohmann
 {
