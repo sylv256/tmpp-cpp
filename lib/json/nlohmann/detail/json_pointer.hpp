@@ -7,9 +7,9 @@
 #include <utility> // move
 #include <vector> // vector
 
-#include "detail/exceptions.hpp"
-#include "detail/macro_scope.hpp"
-#include "detail/value_t.hpp"
+#include "../exceptions.hpp"
+#include "../macro_scope.hpp"
+#include "../value_t.hpp"
 
 namespace nlohmann
 {
